@@ -37,10 +37,6 @@ def main():
 		
 		*Top image from the Ministry of Communications and Information*
 		'''
-		# st.header('Challenged Faced and Future Work')
-		# '''
-		# One challenge faced is that not all addresses are reflected from the OneMap API which resulted in no output shown for the user to input his/her home address to find the path from his/her house to the designated choice of the vaccination centre. Hence, in the event where OneMap API has collated all the data of residences' addresses, I will improve this app by adding the feature showing the path between the chosen vaccination centre and the user's home address input.
-		# '''
 		st.header("References")
 		'''
 		Koh, F. (2020). *7 things to know about phase 3: Dining out in larger groups, free Covid-19 vaccinations.* The Straits Times. December 14. Retrieved from https://www.straitstimes.com/singapore/health/7-things-to-know-about-phase-3-dining-out-in-larger-groups-free-covid-19
