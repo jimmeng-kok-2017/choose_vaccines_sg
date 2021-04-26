@@ -10,7 +10,7 @@ import requests
 
 
 def main():
-	st.title("Choosing Vaccines in Singapore")
+	st.title("Singapore's Covid-19 Vaccination Centres Finder and Vaccine Types")
 	menu = ["About This App", "Vaccination Centres"]
 
 	st.sidebar.subheader('Select display page')
