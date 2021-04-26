@@ -28,7 +28,7 @@ def main():
 		
 		However, the usability is just showing the users the tables of the vaccination centres and the users still have to click on a link showing a map of Singapore with markers of vaccination centres. What if the users not sure which part of Singapore do they live in by looking at the map? Furthermore, scrolling the webpage to see the lists might make the users feel time-consuming.
 		
-		Therefore, for this mini-project, I have built an app that allows users to key in their personal address and to pick their favourite vaccine type before selecting the region, based on where they live in or the place they prefer to go to followed by selecting the vaccination centre they would like to go to. Hence, after selecting these choices, a map of the vaccination centre, as well as the path from their own residence, will be shown. The path allows the users to check whether their personal residence is near or far from their chosen vaccination centre.
+		Therefore, for this mini-project, I have built an app that allows users to key in their personal address and to pick their favourite vaccine type before selecting the region, based on where they live in or the place they prefer to go to followed by selecting the vaccination centre they would like to go to. Hence, after selecting these choices, a map of the vaccination centre, as well as the path from their own residence, will be shown. The path allows the users to check whether their personal residence is near or far from their chosen vaccination centre. Furthermore, the address of the selected vaccination centre will be shown.
 		
 		The data shown in this app is accurately based on the MOH's website. Don't worry, the home address data cannot be collected! In addition, please do remember to register your interest in vaccination at __[www.vaccine.gov.sg](www.vaccine.gov.sg)__!
 		
@@ -88,6 +88,7 @@ def main():
 					folium.PolyLine([convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Tanjong Pagar Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -105,6 +106,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Jalan Besar Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -122,6 +124,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Bishan Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -139,6 +142,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Queenstown Community Centre":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -156,6 +160,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Toa Payoh West Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -173,6 +178,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Bukit Timah Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -190,6 +196,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -219,6 +226,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Pfizer" and region == "North":
 				north_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "North")]
@@ -240,6 +248,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Nee Soon East Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -257,6 +266,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 
@@ -287,6 +297,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Pfizer" and region == "East":
 				east_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "East")]
@@ -308,6 +319,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Bedok Community Centre":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -325,6 +337,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Arena@ Our Tampines Hub (Hockey Court)":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str("Our Tampines Hub") + '&returnGeom=Y&getAddrDetails=Y'
@@ -342,6 +355,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -371,6 +385,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Pfizer" and region == "North East":
 				northeast_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "North East")]
@@ -403,6 +418,7 @@ def main():
 							[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Pfizer" and region == "West":
 				west_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "West")]
@@ -424,6 +440,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Nanyang Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -441,6 +458,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Clementi Community Centre":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -458,6 +476,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Chua Chu Kang Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -475,6 +494,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -504,6 +524,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Moderna" and region == "Central":
 				central_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "Central")]
@@ -525,6 +546,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(
@@ -555,6 +577,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Moderna" and region == "North":
 				north_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "North")]
@@ -576,6 +599,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				elif vc == "Woodlands Community Club":
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -593,6 +617,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 
@@ -624,6 +649,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Moderna" and region == "East":
 				east_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "East")]
@@ -645,6 +671,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -674,6 +701,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Moderna" and region == "North East":
 				northeast_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "North East")]
@@ -695,6 +723,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -724,6 +753,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 			elif vaccine_brand == "Moderna" and region == "West":
 				west_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "West")]
@@ -745,6 +775,7 @@ def main():
 						[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 					# call to render Folium map in Streamlit
 					folium_static(m)
+					st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 				else:
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(
@@ -775,6 +806,7 @@ def main():
 								[convert_address(address_text), [results['LATITUDE'], results['LONGITUDE']]]).add_to(m)
 						# call to render Folium map in Streamlit
 						folium_static(m)
+						st.markdown('The address of the selected vaccination centre is ' + "**" + results['ADDRESS'] + "**")
 
 
 if __name__ == '__main__':
