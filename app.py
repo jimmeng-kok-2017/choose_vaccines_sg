@@ -37,6 +37,10 @@ def main():
 		
 		*Top image from the Ministry of Communications and Information*
 		'''
+        st.header("Future Work")
+		'''
+		If there's the availability of data that allows the users to know which date is the earliest slot that the users can book for the vaccination appointment for that chosen vaccination centre, this feature will be implemented in this app where the earliest date of appointment will be shown on the vaccination centre's marker on the map.
+		'''
 		st.header("References")
 		'''
 		Koh, F. (2020). *7 things to know about phase 3: Dining out in larger groups, free Covid-19 vaccinations.* The Straits Times. December 14. Retrieved from https://www.straitstimes.com/singapore/health/7-things-to-know-about-phase-3-dining-out-in-larger-groups-free-covid-19
