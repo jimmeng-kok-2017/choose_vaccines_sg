@@ -36,17 +36,18 @@ def main():
 		The data shown in this app is accurately based on the MOH's website. Don't worry, the home address data cannot be collected! In addition, please do remember to register your interest in vaccination at __[www.vaccine.gov.sg](www.vaccine.gov.sg)__!
 		
 		To start using this app, select "Vaccination Centres" in the dropdown menu on the left side of this app.
-		
-		
-		*Top image from the Ministry of Communications and Information*
 		'''
 		st.header("Limitation")
 		'''
-		The distance between the user's residence and the chosen vaccination centre did not take into account the roads on the map but it is merely based on one point to one point.
+		The distance between the user's residence and the chosen vaccination centre did not take into account the roads on the map but it is merely based on one point to one point, hence, the straight line.
 		'''
 		st.header("Future Work")
 		'''
 		If there's the availability of data that allows the users to know which date is the earliest slot that the users can book for the vaccination appointment for that chosen vaccination centre, this feature will be implemented in this app where the earliest date of appointment will be shown on the vaccination centre's marker on the map.
+		'''
+		st.markdown("")
+		'''
+		*Top image from the Ministry of Communications and Information*
 		'''
 		st.header("References")
 		'''
@@ -112,7 +113,7 @@ def main():
 						results = data['results'][4] # Raffles City Shopping Centre from OneMapAPI in this 4th index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -131,7 +132,7 @@ def main():
 						results = data['results'][1] # Tanjong Pagar CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -151,7 +152,7 @@ def main():
 						results = data['results'][1] # Jalan Besar CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -171,7 +172,7 @@ def main():
 						results = data['results'][4] # Bishan CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -191,7 +192,7 @@ def main():
 						results = data['results'][3] # Queenstown CC from OneMapAPI in this 3rd index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -211,7 +212,7 @@ def main():
 						results = data['results'][1] # TPY West CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -231,7 +232,7 @@ def main():
 						results = data['results'][1] # Bukit Timah CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -262,7 +263,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -288,7 +289,7 @@ def main():
 						results = data['results'][2] # Canberra CC from OneMapAPI in this 2nd index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -308,7 +309,7 @@ def main():
 						results = data['results'][1] # Nee Soon East CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -340,7 +341,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -366,7 +367,7 @@ def main():
 						results = data['results'][6] # T4 from OneMapAPI in this 6th index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -386,7 +387,7 @@ def main():
 						results = data['results'][1] # Bedok CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -406,7 +407,7 @@ def main():
 						results = data['results'][1] # Our Tampines Hub from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -437,7 +438,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -473,7 +474,7 @@ def main():
 							location_names.append(results['SEARCHVAL'])
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=location_coordinates[0], zoom_start=12)
@@ -498,7 +499,7 @@ def main():
 						results = data['results'][0] # one and only
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -518,7 +519,7 @@ def main():
 						results = data['results'][1] # Nanyang CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -538,7 +539,7 @@ def main():
 						results = data['results'][1] # Clementi CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -558,7 +559,7 @@ def main():
 						results = data['results'][2] # CCK CC from OneMapAPI in this 2nd index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -589,7 +590,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -615,7 +616,7 @@ def main():
 						results = data['results'][1] # Kolam Ayer CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -647,7 +648,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -673,7 +674,7 @@ def main():
 						results = data['results'][4] # Marsiling CC from OneMapAPI in this 4th index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -693,7 +694,7 @@ def main():
 						results = data['results'][1] # Woodlands CC from OneMapAPI in this 1st index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -726,7 +727,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -752,7 +753,7 @@ def main():
 						results = data['results'][2] # Tampines East Community Club from OneMapAPI in this 2nd index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -783,7 +784,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -809,7 +810,7 @@ def main():
 						results = data['results'][3] # Kebun Baru Community CLub from OneMapAPI in this 3rd index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -840,7 +841,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
@@ -866,7 +867,7 @@ def main():
 						results = data['results'][4] # Hong Kah North Community CLub from OneMapAPI in this 4th index
 
 						st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-							'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+							'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 							distance(convert_address(address_text), results['LATITUDE'], results['LONGITUDE'])) + "km**.")
 
 						m = folium.Map(location=[results['LATITUDE'], results['LONGITUDE']], zoom_start=12)
@@ -898,7 +899,7 @@ def main():
 								location_names.append(results['SEARCHVAL'])
 
 							st.markdown('The address of the selected vaccination centre is ' + "**" + results[
-								'ADDRESS'] + "**" + ' and the distance from your house to your selected vaccination centre is ' + "**" + str(
+								'ADDRESS'] + "**" + ' and the straight line distance from your house to your selected vaccination centre is ' + "**" + str(
 								distance(convert_address(address_text), results['LATITUDE'],
 										 results['LONGITUDE'])) + "km**.")
 
