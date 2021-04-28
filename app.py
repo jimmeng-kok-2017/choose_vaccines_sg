@@ -103,7 +103,7 @@ def main():
 
 				if vaccine_brand == "Pfizer" and region == "Central":
 					central_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "Central")]
-					vc = st.selectbox("Choose the vaccination centre", central_pfizer_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", central_pfizer_df.loc[:, "Name"].unique())
 
 					if vc == "Raffles City Convention Centre":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str("Raffles City") + '&returnGeom=Y&getAddrDetails=Y'
@@ -279,7 +279,7 @@ def main():
 
 				elif vaccine_brand == "Pfizer" and region == "North":
 					north_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "North")]
-					vc = st.selectbox("Choose the vaccination centre", north_pfizer_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", north_pfizer_df.loc[:, "Name"].unique())
 
 					if vc == "Canberra Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -357,7 +357,7 @@ def main():
 
 				elif vaccine_brand == "Pfizer" and region == "East":
 					east_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "East")]
-					vc = st.selectbox("Choose the vaccination centre", east_pfizer_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", east_pfizer_df.loc[:, "Name"].unique())
 
 					if vc == "Changi Airport Terminal 4":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -454,7 +454,7 @@ def main():
 
 				elif vaccine_brand == "Pfizer" and region == "North East":
 					northeast_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "North East")]
-					vc = st.selectbox("Choose the vaccination centre", northeast_pfizer_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", northeast_pfizer_df.loc[:, "Name"].unique())
 
 					query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
 					resp = requests.get(query_string)
@@ -489,7 +489,7 @@ def main():
 
 				elif vaccine_brand == "Pfizer" and region == "West":
 					west_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "West")]
-					vc = st.selectbox("Choose the vaccination centre", west_pfizer_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", west_pfizer_df.loc[:, "Name"].unique())
 
 					if vc == "Former Hong Kah Secondary School":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str('Hong Kah Secondary School') + '&returnGeom=Y&getAddrDetails=Y'
@@ -606,7 +606,7 @@ def main():
 
 				elif vaccine_brand == "Moderna" and region == "Central":
 					central_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "Central")]
-					vc = st.selectbox("Choose the vaccination centre", central_moderna_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", central_moderna_df.loc[:, "Name"].unique())
 
 					if vc == "Kolam Ayer Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -664,7 +664,7 @@ def main():
 
 				elif vaccine_brand == "Moderna" and region == "North":
 					north_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "North")]
-					vc = st.selectbox("Choose the vaccination centre", north_moderna_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", north_moderna_df.loc[:, "Name"].unique())
 
 					if vc == "Marsiling Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -743,7 +743,7 @@ def main():
 
 				elif vaccine_brand == "Moderna" and region == "East":
 					east_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "East")]
-					vc = st.selectbox("Choose the vaccination centre", east_moderna_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", east_moderna_df.loc[:, "Name"].unique())
 
 					if vc == "Tampines East Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -800,7 +800,7 @@ def main():
 
 				elif vaccine_brand == "Moderna" and region == "North East":
 					northeast_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "North East")]
-					vc = st.selectbox("Choose the vaccination centre", northeast_moderna_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", northeast_moderna_df.loc[:, "Name"].unique())
 
 					if vc == "Kebun Baru Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
@@ -857,7 +857,7 @@ def main():
 
 				elif vaccine_brand == "Moderna" and region == "West":
 					west_moderna_df = df[(df["Vaccine Type"] == "Moderna") & (df["Region"] == "West")]
-					vc = st.selectbox("Choose the vaccination centre", west_moderna_df.loc[:, "Name"].unique())
+					vc = st.radio("Choose the vaccination centre", west_moderna_df.loc[:, "Name"].unique())
 
 					if vc == "Hong Kah North Community Club":
 						query_string = 'https://developers.onemap.sg/commonapi/search?searchVal=' + str(vc) + '&returnGeom=Y&getAddrDetails=Y'
