@@ -90,7 +90,7 @@ def main():
 
 		df = pd.read_csv('Vaccination_Centres.csv')
 
-		address_text = st.text_input('Type your Address', '')
+		address_text = st.text_input('Type your Address (For example, 108 Punggol Field):', '')
 
 		if address_text:
 
