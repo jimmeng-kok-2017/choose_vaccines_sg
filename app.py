@@ -101,7 +101,7 @@ def main():
 				region = st.selectbox("Select a region in Singapore you live in or you plan to go to",
 									  df.loc[:, "Region"].unique())  # ["Central", "North", "East", "North East", "West"])
                                       
-                address_text_plus = address_text.replace(" ", "+")
+				address_text_plus = address_text.replace(" ", "+")
 
 				if vaccine_brand == "Pfizer" and region == "Central":
 					central_pfizer_df = df[(df["Vaccine Type"] == "Pfizer") & (df["Region"] == "Central")]
